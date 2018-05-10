@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Starter
+ * @package Mom
  */
 
 ?>
@@ -16,20 +16,20 @@
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="text-muted">
 			<?php
-			starter_posted_on();
-			starter_posted_by();
+			mom_posted_on();
+			mom_posted_by();
 			?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php starter_post_thumbnail(); ?>
+	<?php mom_post_thumbnail(); ?>
 
 	<div class="container">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 
 	<footer class="container">
-		<?php starter_entry_footer(); ?>
+		<?php mom_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

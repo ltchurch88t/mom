@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Starter
+ * @package Mom
  */
 
 ?>
@@ -51,10 +51,10 @@
 				<p class="display-3" id="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php
 			endif;
-			$starter_description = get_bloginfo( 'description', 'display' );
-			if ( $starter_description || is_customize_preview() ) :
+			$mom_description = get_bloginfo( 'description', 'display' );
+			if ( $mom_description || is_customize_preview() ) :
 				?>
-				<p class="text-muted" id="site-description"><?php echo $starter_description; /* WPCS: xss ok. */ ?></p>
+				<p class="text-muted" id="site-description"><?php echo $mom_description; /* WPCS: xss ok. */ ?></p>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 

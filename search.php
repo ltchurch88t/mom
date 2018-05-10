@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package Starter
+ * @package Mom
  */
 
 get_header();
@@ -15,11 +15,11 @@ get_header();
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="container">
+			<header class="row">
 				<h1 class="h2">
 					<?php
 					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'starter' ), '<span>' . get_search_query() . '</span>' );
+					printf( esc_html__( 'Search Results for: %s', 'mom' ), '<span>' . get_search_query() . '</span>' );
 					?>
 				</h1>
 			</header><!-- .page-header -->
@@ -51,5 +51,6 @@ get_header();
 	</section><!-- #primary -->
 
 <?php
-get_sidebar();
+// Default sidebar is set to off as it looks much cleaner on layout. Simply uncomment to activate
+// get_sidebar();
 get_footer();
