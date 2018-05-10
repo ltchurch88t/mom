@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Starter
+ * @package Mom
  */
 
 ?>
@@ -17,7 +17,7 @@
 		<div id="site-info" class="row justify-content-center">
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s | Created by %2$s.', 'starter' ), 'Starter', '<a href="https://nakdesignstudio.io/">&nbsp;NAK Design Studio</a>' );
+				printf( esc_html__( 'Theme: %1$s | Created by %2$s.', 'starter' ), 'mom', '<a href="https://nakdesignstudio.io/">&nbsp;NAK Design Studio</a>' );
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

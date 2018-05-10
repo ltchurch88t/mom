@@ -4,14 +4,14 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Starter
+ * @package Mom
  */
 
 ?>
 
 <section class="container">
 	<header class="row">
-		<h1 class="text-danger"><?php esc_html_e( 'Nothing Found', 'starter' ); ?></h1>
+		<h1 class="text-danger"><?php esc_html_e( 'Nothing Found', 'mom' ); ?></h1>
 	</header><!-- .page-header -->
 
 	<div class="row">
@@ -21,7 +21,7 @@
 			printf(
 				'<p>' . wp_kses(
 					/* translators: 1: link to WP admin new post page. */
-					__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'starter' ),
+					__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'mom' ),
 					array(
 						'a' => array(
 							'href' => array(),
@@ -34,14 +34,14 @@
 		elseif ( is_search() ) :
 			?>
 
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'starter' ); ?></p>
+			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'mom' ); ?></p>
 			<?php
 			get_search_form();
 
 		else :
 			?>
 
-			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'starter' ); ?></p>
+			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'mom' ); ?></p>
 			<?php
 			get_search_form();
 

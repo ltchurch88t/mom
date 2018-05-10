@@ -4,56 +4,55 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Starter
+ * @package Mom
  */
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="container">
+<article class="card w-100 text-center shadow p-3 mb-5 bg-white rounded" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<header class="card-title">
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="text-secondary">', '</h1>' );
 		else :
-			the_title( '<h1><a class="text-secondary" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
+			the_title( '<h1 class="text-secondary">', '</h1>' );
 		endif;
 
 		if ( 'post' === get_post_type() ) :
 			?>
-			<div class="text-muted">
+			<div class="card-subtitle mb-2 text-muted">
 				<?php
-				starter_posted_on();
-				starter_posted_by();
+				mom_posted_on();
+				mom_posted_by();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php starter_post_thumbnail(); ?>
+	<?php mom_post_thumbnail(); ?>
 
-	<div class="container">
-		<?php
-		the_content( sprintf(
-			wp_kses(
-				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'starter' ),
-				array(
-					'span' => array(
-						'class' => array(),
-					),
-				)
-			),
-			get_the_title()
-		) );
+	<div class="card-body">
+		<div class="card-text">
+			<?php
+			the_content( sprintf(
+				wp_kses(
+					/* translators: %s: Name of current post. Only visible to screen readers */
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'mom' ),
+					array(
+						'span' => array(
+							'class' => array(),
+						),
+					)
+				),
+				get_the_title()
+			) );
 
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'starter' ),
-			'after'  => '</div>',
-		) );
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="container">
-		<?php starter_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'mom' ),
+				'after'  => '</div>',
+			) );
+			?>
+		</div><!-- .entry-content -->
+		<a href="<?php echo get_permalink(); ?>" class="btn btn-primary">Go to post</a> <!-- button to link to post page -->
+	</div> <!--- .card-body --->
 </article><!-- #post-<?php the_ID(); ?> -->
